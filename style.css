@@ -19,7 +19,7 @@ header {
     width: calc(100% - 40px);
     max-width: 860px;
     z-index: 1000;
-    background: url('image/Anh và em.HEIC');
+    background: url('images/Anh và em.HEIC');
     background-size: cover;
     background-position: center;
     padding: 20px;
