@@ -242,11 +242,15 @@ const chatResponses = {
     "hi": "Chào em yêu của anh 💕",
     "chào": "Chào em yêu của anh 💕",
     "em thích":"Em thích được anh cưng chiều 💕",
-    "sắp":"sắp tới anh sẽ dẫn em đi Vũng Tàu nhé 💕",
+    "sắp":"Sắp tới anh sẽ dẫn em đi Vũng Tàu nhé 💕",
     "cưới":"Anh sẽ cố gắn để sớm được rước em về làm dâu nhà anh 💕",
     "hỏi":"Em có thể hỏi anh các câu hỏi như ngày sinh của em và anh, kỷ niệm, hoặc là ngày chúng mình quen nhau",
     "tại sao":"Anh yêu em vì con người của em 💕",
     "kỷ niệm":"Mỗi khoảnh khắc bên em đều là kỷ niệm đáng nhớ với anh 💕",
+    "thật":"Dạ thật 100%, chuẩn men luôn ạ 💕",
+    "lấy":"Anh sẽ cố gắn để sớm được rước em về làm dâu nhà anh 💕",
+    "nhà em":"Ở nhà anh chứ đâu 💕",
+    "yêu":"Yêu em nhiều lắm 💕",
 };
 
 function getBotResponse(input) {
