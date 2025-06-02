@@ -19,7 +19,7 @@ header {
     width: calc(100% - 40px);
     max-width: 860px;
     z-index: 1000;
-    background: url('images/Anh và em.HEIC');
+    background: url('images/Anh\ và\ em.HEIC');
     background-size: cover;
     background-position: center;
     padding: 20px;
@@ -297,19 +297,6 @@ button {
 
 }
 
-.love-question {
-    opacity: 1;
-    transition: all 0.5s ease;
-    margin: 20px 0;
-}
-
-.love-question.hidden {
-    opacity: 0;
-    height: 0;
-    margin: 0;
-    pointer-events: none;
-}
-
 .hidden-content {
     opacity: 0;
     transform: translateY(20px);
@@ -321,4 +308,195 @@ button {
     opacity: 1;
     transform: translateY(0);
     visibility: visible;
+}
+
+/*scrollToTop8*/
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 182, 193, 0.8);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s;
+}
+
+#scrollToTop:hover {
+    background-color: #ff69b4;
+}
+
+/* Chat Bot Styles */
+.chat-wrapper {
+    position: fixed;
+    bottom: 90px;
+    right: 35px;
+    z-index: 1001;
+}
+
+.chat-heart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #FFE4EC;
+    padding: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(255, 105, 180, 0.2);
+    transition: transform 0.3s;
+    font-size: 22px;
+}
+
+.chat-heart:hover {
+    transform: scale(1.1);
+}
+
+.chat-container {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 0px;
+    width: 260px;
+    height: 340px;
+    background: #FFF0F5;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(255, 105, 180, 0.18);
+    border: 1px solid rgba(255, 105, 180, 0.18);
+    overflow: hidden;
+}
+
+.chat-container.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #FF69B4;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.close-chat {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 0 2px;
+    height: 18px;
+    line-height: 1;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 10px 8px 8px 8px;
+    overflow-y: auto;
+    background: rgba(247, 247, 247, 0.93);
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    max-height: 220px;
+    font-size: 13px;
+}
+
+.message {
+    margin: 3px 0;
+    max-width: 85%;
+    padding: 7px 11px;
+    font-size: 13px;
+    word-break: break-word;
+    box-shadow: 0 1px 3px rgba(255, 105, 180, 0.07);
+    width: fit-content;
+    border-radius: 15px;
+    clear: both;
+    line-height: 1.5;
+}
+
+.user-message {
+    background: #FF69B4;
+    color: white;
+    align-self: flex-end;
+    border-radius: 15px 15px 3px 15px;
+    border: 1px solid #ff4da6;
+}
+
+.bot-message {
+    background: #FFE4EC;
+    color: #333;
+    align-self: flex-start;
+    border-radius: 15px 15px 15px 3px;
+    border: 1px solid #ffb6c1;
+}
+
+.chat-input {
+    padding: 7px 8px;
+    display: flex;
+    gap: 5px;
+    background: #FFE4EC;
+    border-radius: 0 0 15px 15px;
+    border-top: 1px solid rgba(255, 105, 180, 0.13);
+    align-items: center;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid rgba(255, 105, 180, 0.22);
+    border-radius: 12px;
+    outline: none;
+    font-size: 13px;
+    background: #fff;
+    height: 28px;
+}
+
+.chat-input button,
+#sendMessage {
+    background: #FF69B4;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0 13px;
+    font-size: 15px;
+    height: 28px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-input button:hover,
+#sendMessage:hover {
+    background: #ff4da6;
+}
+
+/* Responsive for small screens */
+@media (max-width: 500px) {
+    .chat-container {
+        width: 98vw;
+        min-width: 0;
+        right: 1vw;
+        left: 1vw;
+        height: 60vw;
+        min-height: 220px;
+        max-height: 80vw;
+    }
+    .chat-messages {
+        max-height: 40vw;
+        font-size: 12px;
+    }
 }
