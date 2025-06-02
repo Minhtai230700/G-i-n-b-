@@ -486,17 +486,95 @@ button {
 
 /* Responsive for small screens */
 @media (max-width: 500px) {
-    .chat-container {
-        width: 98vw;
-        min-width: 0;
-        right: 1vw;
-        left: 1vw;
-        height: 60vw;
-        min-height: 220px;
-        max-height: 80vw;
+    .chat-wrapper {
+        bottom: 70px;
+        right: 10px; /* Giảm khoảng cách với mép phải */
+        max-width: 90vw; /* Giới hạn chiều rộng tối đa */
     }
+    
+    .chat-container {
+        width: 280px; /* Cố định chiều rộng */
+        right: 0;
+        bottom: 40px;
+        max-height: 400px;
+    }
+
+    /* Đảm bảo container không bị tràn ra ngoài màn hình */
+    .chat-container.active {
+        right: 0;
+        left: auto;
+        transform: translateX(0);
+    }
+
     .chat-messages {
-        max-height: 40vw;
-        font-size: 12px;
+        max-height: 280px;
+    }
+
+    /* Điều chỉnh kích thước nút chat */
+    .chat-heart {
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+/* Thêm breakpoint cho màn hình cực nhỏ */
+@media (max-width: 320px) {
+    .chat-container {
+        width: 260px;
+        right: -20px; /* Điều chỉnh vị trí để không bị tràn */
+    }
+}
+    .chat-heart {
+        bottom: 20px;
+        right: 28px; /* Giảm khoảng cách với mép phải */
+    }
+
+/* Responsive styling for love-question */
+@media (max-width: 500px) {
+    .love-question {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .love-question h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px; /* Giảm margin dưới */
+    }
+    
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;  /* Giảm khoảng cách giữa các button */
+        width: 100%;
+    }
+
+    .button-container button {
+        width: 100%;
+        max-width: 100px;
+        margin: 0 auto;
+        padding: 6px 12px;  /* Giảm padding thêm cho mobile */
+        min-width: 80px;    /* Giảm min-width trên mobile */
+        font-size: 0.9rem;
+    }
+
+    .intro {
+        width: 90%;
+        margin: 15px auto;
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .love-question h2 {
+        font-size: 1rem;
+    }
+
+    .button-container button {
+        padding: 5px 10px;  /* Giảm padding thêm cho màn hình nhỏ */
+        min-width: 70px;
+        font-size: 0.85rem;
     }
 }
